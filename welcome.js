@@ -103,7 +103,7 @@ async function sendGoodbye(member) {
     const attachment = new AttachmentBuilder(buffer, { name: 'goodbye.png' });
 
     await channel.send({
-      content: `Selamat tinggal **${member.user.tag}** 👋`,
+      content: `Selamat tinggal **<@${member.id}>** 👋`,
       files:   [attachment],
     });
   } catch (err) {
